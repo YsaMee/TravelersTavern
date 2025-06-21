@@ -1,0 +1,552 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ken"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-05-14 04:29:34 pm"/>
+        <attribute name="created" value="a2VuO0xBUFRPUC03RURTVDVVTDsyMDIzLTA1LTExOzA2OjQ5OjQ4IHBtOzI3NTM="/>
+        <attribute name="edited" value="a2VuO0xBUFRPUC03RURTVDVVTDsyMDIzLTA1LTExOzA3OjEwOjQ2IHBtOzQ0O2tlbjtMQVBUT1AtN0VEU1Q1VUw7MjAyMy0wNS0wOTswNDo1OTozMSBwbTtNZW51LmZwcmc7NjY1NA=="/>
+        <attribute name="edited" value="a2VuO0xBUFRPUC03RURTVDVVTDsyMDIzLTA1LTExOzA3OjE1OjQ4IHBtOzI7THlrYSBTb3BoaWE7REVTS1RPUC1JUlBKTFJQOzIwMjMtMDEtMjE7MDk6MDg6MzQgQU07RG90Q29tTmFpbEJhcl9GTE9XR09SSVRITS0xLmZwcmc7OTE3Ng=="/>
+        <attribute name="edited" value="a2VuO0xBUFRPUC03RURTVDVVTDsyMDIzLTA1LTE0OzA0OjI5OjM0IHBtOzE3OzI5MTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a1, a2, a3, a4, a5" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <assign variable="a1" expression="99.00"/>
+            <assign variable="a2" expression="45.00"/>
+            <assign variable="a3" expression="75.00"/>
+            <assign variable="a4" expression="70.00"/>
+            <assign variable="a5" expression="85.00"/>
+            <declare name="b1, b2, b3, b4, b5, b6, b7" type="Real" array="False" size=""/>
+            <assign variable="b1" expression="165.00"/>
+            <assign variable="b2" expression="178.00"/>
+            <assign variable="b3" expression="230.00"/>
+            <assign variable="b4" expression="150.00"/>
+            <assign variable="b5" expression="175.00"/>
+            <assign variable="b6" expression="200.00"/>
+            <assign variable="b7" expression="135.00"/>
+            <declare name="c1, c2, c3, c4, c5" type="Real" array="False" size=""/>
+            <assign variable="c1" expression="40.00"/>
+            <assign variable="c2" expression="50.00"/>
+            <assign variable="c3" expression="30.00"/>
+            <assign variable="c4" expression="145.00"/>
+            <assign variable="c5" expression="75.00"/>
+            <declare name="d1, d2, d3, d4" type="Real" array="False" size=""/>
+            <assign variable="d1" expression="145.00"/>
+            <assign variable="d2" expression="85.00"/>
+            <assign variable="d3" expression="350.00"/>
+            <declare name="e1, e2, e3" type="Real" array="False" size=""/>
+            <assign variable="e1" expression="65.00"/>
+            <assign variable="e2" expression="80.00"/>
+            <assign variable="e3" expression="50.00"/>
+            <declare name="f1, f2, f3" type="Real" array="False" size=""/>
+            <assign variable="f1" expression="20.00"/>
+            <assign variable="f2" expression="25.00"/>
+            <assign variable="f3" expression="55.00"/>
+            <declare name="menu1" type="Real" array="False" size=""/>
+            <assign variable="menu1" expression="0"/>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <output expression="&quot; Welcome to Traveler's Tavern! , please enter your name. &quot;" newline="True"/>
+            <declare name="Name" type="String" array="False" size=""/>
+            <input variable="Name"/>
+            <output expression="&quot; Good day &quot; &amp;name&amp;&quot; welcome to our restaurant. &quot;" newline="True"/>
+            <output expression="&quot; Are you for dine-in or take out? Press (1) for dine-in, press (2) for take-out.  &quot;" newline="True"/>
+            <declare name="choose" type="Integer" array="False" size=""/>
+            <input variable="choose"/>
+            <if expression="choose == 1">
+                <then>
+                    <output expression="&quot; Great, there are still tables available. &quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="choose == 2">
+                        <then>
+                            <output expression="&quot; Great, we have waiting area for our customers. &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; Invalid code &quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot; Here is our menu category: &quot;" newline="True"/>
+            <declare name="menuchoice" type="Integer" array="False" size=""/>
+            <assign variable="menuchoice" expression="0"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <do expression="choice == 1">
+                <output expression="&quot; Appetizers - (1) &quot;" newline="True"/>
+                <output expression="&quot; Main course - (2)&quot;" newline="True"/>
+                <output expression="&quot; Dessert - (3) &quot;" newline="True"/>
+                <output expression="&quot; Side dish - (4) &quot;" newline="True"/>
+                <output expression="&quot; Breakfast - (5) &quot;" newline="True"/>
+                <output expression="&quot; Drinks - (6) &quot;" newline="True"/>
+                <output expression="&quot; Please enter the item code of your order otherwise input (7) to check out. &quot;" newline="True"/>
+                <input variable="menuchoice"/>
+                <if expression="menuchoice == 1">
+                    <then>
+                        <declare name="answer" type="Real" array="False" size=""/>
+                        <declare name="orders" type="Real" array="False" size=""/>
+                        <output expression="&quot; You chose option 1, these are our appetizers: &quot;" newline="True"/>
+                        <output expression="&quot; (1) Sauteed Matsutake - 99.00 &quot;" newline="True"/>
+                        <output expression="&quot; (2) Jade Parcel Siomai - 45.00 &quot;" newline="True"/>
+                        <output expression="&quot; (3) Crystal Shrimp Platter = 75.00 &quot;" newline="True"/>
+                        <output expression="&quot; (4) Fried Radish balls = 75.00 &quot;" newline="True"/>
+                        <output expression="&quot; (5) Masala Cheese Balls = 85.00 &quot;" newline="True"/>
+                        <output expression="&quot; Please enter the number code of your order &quot;" newline="True"/>
+                        <input variable="answer"/>
+                        <if expression="answer == 1">
+                            <then>
+                                <assign variable="a1" expression="99.00"/>
+                                <output expression="&quot;You have chose Sauteed Matsutake. Your total is 99.00. How many orders do you want to make?&quot;" newline="True"/>
+                                <input variable="orders"/>
+                                <assign variable="price" expression="a1 * orders"/>
+                                <assign variable="menu1" expression="menu1 + price"/>
+                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                            </then>
+                            <else>
+                                <if expression="answer == 2">
+                                    <then>
+                                        <assign variable="a2" expression="45.00"/>
+                                        <output expression="&quot;You have chosen Jade Parcel Siomai. Your total is 45.00. How many orders do you want to make?&quot;" newline="True"/>
+                                        <input variable="orders"/>
+                                        <assign variable="price" expression="a2 * orders"/>
+                                        <assign variable="menu1" expression="menu1 + price"/>
+                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="answer == 3">
+                                            <then>
+                                                <assign variable="a3" expression="75.00"/>
+                                                <output expression="&quot;You have chosen Crystal Shrimp Platter. Your total is 75.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                <input variable="orders"/>
+                                                <assign variable="price" expression="a3 * orders"/>
+                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="answer == 4">
+                                                    <then>
+                                                        <assign variable="a4" expression="70.00"/>
+                                                        <output expression="&quot;You have chosen Fries Radish balls. Your total is 70.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                        <input variable="orders"/>
+                                                        <assign variable="price" expression="a4 * orders"/>
+                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="answer == 5">
+                                                            <then>
+                                                                <assign variable="a5" expression="85.00"/>
+                                                                <output expression="&quot;You have chosen Masala Cheese balls. Your total is 85.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                <input variable="orders"/>
+                                                                <assign variable="price" expression="a5 * orders"/>
+                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot; Invalid order code &quot;" newline="True"/>
+                                                                <breakpoint expression="" always="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="menuchoice == 2">
+                            <then>
+                                <declare name="answer" type="Real" array="False" size=""/>
+                                <declare name="orders" type="Real" array="False" size=""/>
+                                <output expression="&quot; You chose option 2, these are our Main Courses: &quot;" newline="True"/>
+                                <output expression="&quot; (1) Zhongyuan Chopsuey = 165.00 &quot;" newline="True"/>
+                                <output expression="&quot; (2) Sticky Honey Roast = 178.00 &quot;" newline="True"/>
+                                <output expression="&quot; (3) Sweet Madame = 230.00 &quot;" newline="True"/>
+                                <output expression="&quot; (4) Avidya Goulash = 150.00 &quot;" newline="True"/>
+                                <output expression="&quot; (5) Qince Stir-Fried rice = 175.00 &quot;" newline="True"/>
+                                <output expression="&quot; (6) Watcher's Biryani = 200.00 &quot;" newline="True"/>
+                                <output expression="&quot; (7) Setekh Potato Curry  = 135.00 &quot;" newline="True"/>
+                                <output expression="&quot; Please enter the number code of your order &quot;" newline="True"/>
+                                <input variable="answer"/>
+                                <if expression="answer == 1">
+                                    <then>
+                                        <assign variable="b2" expression="165.00"/>
+                                        <output expression="&quot;You have chosen Zhongyuan Chopsuey. Your total is 165.00. How many orders do you want to make?&quot;" newline="True"/>
+                                        <input variable="orders"/>
+                                        <assign variable="price" expression="b1 * orders"/>
+                                        <assign variable="menu1" expression="menu1 + price"/>
+                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="answer == 2">
+                                            <then>
+                                                <assign variable="b2" expression="178.00"/>
+                                                <output expression="&quot;You have chosen Sticky Honey Roast. Your total is 178.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                <input variable="orders"/>
+                                                <assign variable="price" expression="b2 * orders"/>
+                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="answer == 3">
+                                                    <then>
+                                                        <assign variable="b3" expression="230.00"/>
+                                                        <output expression="&quot;You have chosen Sweet Madame. Your total is 230.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                        <input variable="orders"/>
+                                                        <assign variable="price" expression="b3 * orders"/>
+                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="answer == 4">
+                                                            <then>
+                                                                <assign variable="b4" expression="150.00"/>
+                                                                <output expression="&quot;You have chosen Avidya Goulash. Your total is 150.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                <input variable="orders"/>
+                                                                <assign variable="price" expression="b4 * orders"/>
+                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="answer == 5">
+                                                                    <then>
+                                                                        <assign variable="b5" expression="175.00"/>
+                                                                        <output expression="&quot;You have chosen Qince Stir-fried rice. Your total is 175.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                        <input variable="orders"/>
+                                                                        <assign variable="price" expression="b5 * orders"/>
+                                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="answer == 6">
+                                                                            <then>
+                                                                                <assign variable="b6" expression="200.00"/>
+                                                                                <output expression="&quot;You have chosen Watcher's Biryani. Your total is 200.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                                <input variable="orders"/>
+                                                                                <assign variable="price" expression="b6 * orders"/>
+                                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <if expression="answer == 7">
+                                                                                    <then>
+                                                                                        <assign variable="b7" expression="135.00"/>
+                                                                                        <output expression="&quot;You have chosen Setekh Potato Curry. Your total is 135.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                                        <input variable="orders"/>
+                                                                                        <assign variable="price" expression="b7 * orders"/>
+                                                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <output expression="&quot; Invalid order code &quot;" newline="True"/>
+                                                                                        <breakpoint expression="" always="True"/>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <if expression="menuchoice == 3">
+                                    <then>
+                                        <declare name="answer" type="Real" array="False" size=""/>
+                                        <declare name="orders" type="Real" array="False" size=""/>
+                                        <output expression="&quot; You chose option 3, these are our desserts: &quot;" newline="True"/>
+                                        <output expression="&quot; (1) Almond Taho = 40.00 &quot;" newline="True"/>
+                                        <output expression="&quot; (2) Padesarah Ube Pudding = 50.00 &quot;" newline="True"/>
+                                        <output expression="&quot; (3) Tri-color Dango Mochi = 30.00 &quot;" newline="True"/>
+                                        <output expression="&quot; (4) Halo-halo = 145.00 &quot;" newline="True"/>
+                                        <output expression="&quot; (5) Taiyaki Ice-cream = 75.00 &quot;" newline="True"/>
+                                        <output expression="&quot; Please enter the number code of your order &quot;" newline="True"/>
+                                        <input variable="answer"/>
+                                        <if expression="answer == 1">
+                                            <then>
+                                                <assign variable="c1" expression="40.00"/>
+                                                <output expression="&quot;You have chosen Sticky Almond Taho. Your total is 40.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                <input variable="orders"/>
+                                                <assign variable="price" expression="c1 * orders"/>
+                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                            </then>
+                                            <else>
+                                                <if expression="answer == 2">
+                                                    <then>
+                                                        <assign variable="c2" expression="50.00"/>
+                                                        <output expression="&quot;You have chosen Padisarah Ube Pudding. Your total is 50.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                        <input variable="orders"/>
+                                                        <assign variable="price" expression="c2 * orders"/>
+                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="answer == 3">
+                                                            <then>
+                                                                <assign variable="c3" expression="30.00"/>
+                                                                <output expression="&quot;You have chosen Tri-color Dango Mochi. Your total is 30.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                <input variable="orders"/>
+                                                                <assign variable="price" expression="c3 * orders"/>
+                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="answer == 4">
+                                                                    <then>
+                                                                        <assign variable="c4" expression="145.00"/>
+                                                                        <output expression="&quot;You have chosen Halo-halo. Your total is 145.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                        <input variable="orders"/>
+                                                                        <assign variable="price" expression="c4 * orders"/>
+                                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="answer == 5">
+                                                                            <then>
+                                                                                <assign variable="c5" expression="75.00"/>
+                                                                                <output expression="&quot;You have chosen Taiyaki Ice-cream. Your total is 75.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                                <input variable="orders"/>
+                                                                                <assign variable="price" expression="c5 * orders"/>
+                                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <output expression="&quot; Invalid order code &quot;" newline="True"/>
+                                                                                <breakpoint expression="" always="True"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="menuchoice == 4">
+                                            <then>
+                                                <declare name="answer" type="Real" array="False" size=""/>
+                                                <declare name="orders" type="Real" array="False" size=""/>
+                                                <output expression="&quot; You chose option 4, these are our side dishes: &quot;" newline="True"/>
+                                                <output expression="&quot; (1) Karkata Carbonara = 145.00 &quot;" newline="True"/>
+                                                <output expression="&quot; (2) Puppy-paw Hashbrowns = 85.00 &quot;" newline="True"/>
+                                                <output expression="&quot; (3) Forest Fresh Pizza = 350.00 &quot;" newline="True"/>
+                                                <output expression="&quot; Please enter the number code of your order &quot;" newline="True"/>
+                                                <input variable="answer"/>
+                                                <if expression="answer == 1">
+                                                    <then>
+                                                        <assign variable="d1" expression="145.00"/>
+                                                        <output expression="&quot;You have chosen Karkata Carbonara. Your total is 145.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                        <input variable="orders"/>
+                                                        <assign variable="price" expression="d1 * orders"/>
+                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="answer == 2">
+                                                            <then>
+                                                                <assign variable="d2" expression="85.00"/>
+                                                                <output expression="&quot;You have chosen Puppy-paw Hashbrowns. Your total is 85.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                <input variable="orders"/>
+                                                                <assign variable="price" expression="d2 * orders"/>
+                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="answer == 3">
+                                                                    <then>
+                                                                        <assign variable="d3" expression="350.00"/>
+                                                                        <output expression="&quot;You have chosen Forest Fresh Pizza. Your total is 350.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                        <input variable="orders"/>
+                                                                        <assign variable="price" expression="d3 * orders"/>
+                                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot; Invalid order code &quot;" newline="True"/>
+                                                                        <breakpoint expression="" always="True"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </then>
+                                            <else>
+                                                <if expression="menuchoice == 5">
+                                                    <then>
+                                                        <declare name="answer" type="Integer" array="False" size=""/>
+                                                        <declare name="orders" type="Real" array="False" size=""/>
+                                                        <output expression="&quot; You chose option 5, these are our Breakfast dishes: &quot;" newline="True"/>
+                                                        <output expression="&quot; (1) Adventurer's Breakfast Sandwich = 65.00 &quot;" newline="True"/>
+                                                        <output expression="&quot; (2) Windward Waffles = 80.00 &quot;" newline="True"/>
+                                                        <output expression="&quot; (3) Stormcrest Pie = 50.00 &quot;" newline="True"/>
+                                                        <output expression="&quot; Please enter the number code of your order &quot;" newline="True"/>
+                                                        <input variable="answer"/>
+                                                        <if expression="answer == 1">
+                                                            <then>
+                                                                <assign variable="e1" expression="65.00"/>
+                                                                <output expression="&quot;You have chosen Adventurer's Breakfast Sandwich. Your total is 65.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                <input variable="orders"/>
+                                                                <assign variable="price" expression="e1 * orders"/>
+                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="answer == 2">
+                                                                    <then>
+                                                                        <assign variable="e2" expression="80.00"/>
+                                                                        <output expression="&quot;You have chosen Windward Waffles. Your total is 80.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                        <input variable="orders"/>
+                                                                        <assign variable="price" expression="e2 * orders"/>
+                                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="answer == 3">
+                                                                            <then>
+                                                                                <assign variable="e3" expression="50.00"/>
+                                                                                <output expression="&quot;You have chosen Stormcrest Pie. Your total is 50.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                                <input variable="orders"/>
+                                                                                <assign variable="price" expression="e3 * orders"/>
+                                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <output expression="&quot; Invalid order code &quot;" newline="True"/>
+                                                                                <breakpoint expression="" always="True"/>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="menuchoice == 6">
+                                                            <then>
+                                                                <declare name="answer" type="Integer" array="False" size=""/>
+                                                                <declare name="orders" type="Real" array="False" size=""/>
+                                                                <output expression="&quot; You chose option 6, these are our drinks: &quot;" newline="True"/>
+                                                                <output expression="&quot; (1) Distilled Water = 20.00 &quot;" newline="True"/>
+                                                                <output expression="&quot; (2) Softdrinks = 25.00 &quot;" newline="True"/>
+                                                                <output expression="&quot; (3) Wolfhook Juice = 55.00 &quot;" newline="True"/>
+                                                                <output expression="&quot; Please enter the number code of your order &quot;" newline="True"/>
+                                                                <input variable="answer"/>
+                                                                <if expression="answer == 1">
+                                                                    <then>
+                                                                        <assign variable="f1" expression="20.00"/>
+                                                                        <output expression="&quot;You have chosen Distilled Water. Your total is 20.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                        <input variable="orders"/>
+                                                                        <assign variable="price" expression="f1 * orders"/>
+                                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <if expression="answer == 2">
+                                                                            <then>
+                                                                                <assign variable="f1" expression="20.00"/>
+                                                                                <output expression="&quot;You have chosen Softdrinks. Your total is 25.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                                <input variable="orders"/>
+                                                                                <assign variable="price" expression="f2 * orders"/>
+                                                                                <assign variable="menu1" expression="menu1 + price"/>
+                                                                                <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                            </then>
+                                                                            <else>
+                                                                                <if expression="answer == 3">
+                                                                                    <then>
+                                                                                        <assign variable="f3" expression="55.00"/>
+                                                                                        <output expression="&quot;You have chosen Wolfhook juice. Your total is 55.00. How many orders do you want to make?&quot;" newline="True"/>
+                                                                                        <input variable="orders"/>
+                                                                                        <assign variable="price" expression="f3 * orders"/>
+                                                                                        <assign variable="menu1" expression="menu1 + price"/>
+                                                                                        <output expression="&quot;Your total is &quot; &amp;menu1" newline="True"/>
+                                                                                    </then>
+                                                                                    <else>
+                                                                                        <output expression="&quot; Invalid order code &quot;" newline="True"/>
+                                                                                        <breakpoint expression="" always="True"/>
+                                                                                    </else>
+                                                                                </if>
+                                                                            </else>
+                                                                        </if>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="menuchoice ==7">
+                                                                    <then>
+                                                                        <output expression="&quot; Thank you for dining with us. have a wonderful day! &quot;" newline="True"/>
+                                                                        <breakpoint expression="" always="True"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot; Invalid code &quot;" newline="True"/>
+                                                                        <breakpoint expression="" always="True"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <output expression="&quot; Would you like to order again? Press (1) for YES, press (2) for NO.  &quot;" newline="True"/>
+                <input variable="choice"/>
+            </do>
+            <assign variable="menu1" expression="menu1 + total"/>
+            <declare name="payment" type="Real" array="False" size=""/>
+            <output expression="&quot; CALCULATING... &quot;" newline="True"/>
+            <output expression="&quot;Your total price is, &#8369;&quot;&amp;menu1" newline="True"/>
+            <output expression="&quot; Please select payment method (CASH/ E-MONEY). Input (1) for CASH input (2) for E-MONEY. &quot;" newline="True"/>
+            <input variable="payment"/>
+            <if expression="payment == 1">
+                <then>
+                    <output expression="&quot;Your total price is &#8369;&quot;&amp;menu1 &amp; &quot; please proceed to the cashier for payment. &quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="payment == 2">
+                        <then>
+                            <output expression="&quot;Your total price is, &#8369;&quot;&amp;menu1" newline="True"/>
+                            <output expression="&quot; Please scan this qr code below and proceed to the cashier for confirmation &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot; Invalid code &quot;" newline="True"/>
+                            <breakpoint expression="" always="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Thank you for dining with us. Hope to see you again. &quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="End" type="None" variable="">
+        <parameters>
+            <parameter name="Fish" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot; Please try again. &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
